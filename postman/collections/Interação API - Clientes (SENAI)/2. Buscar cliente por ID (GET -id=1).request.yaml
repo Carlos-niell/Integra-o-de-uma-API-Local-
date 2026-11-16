@@ -1,0 +1,7 @@
+$kind: http-request
+name: 2. Buscar cliente por ID (GET ?id=1)
+url: http://localhost:3000/clientes?id=1
+method: GET
+queryParams:
+  id: "1"
+order: 2000

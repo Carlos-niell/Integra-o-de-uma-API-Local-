@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/clientes/1
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nome": "Maria Silva Atualizada",
+      "endereco": "Rua das Flores, 999"
+    }
+order: 4000

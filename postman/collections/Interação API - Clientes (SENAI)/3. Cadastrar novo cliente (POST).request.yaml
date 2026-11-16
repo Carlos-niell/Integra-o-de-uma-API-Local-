@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/clientes
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nome": "Ana Costa",
+      "endereco": "Rua Sete de Setembro, 789"
+    }
+order: 3000

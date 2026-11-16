@@ -1,0 +1,2 @@
+$kind: collection
+description: Coleção Postman para testar todas as rotas (GET, POST, PUT, DELETE) da API de Clientes em Node.js.

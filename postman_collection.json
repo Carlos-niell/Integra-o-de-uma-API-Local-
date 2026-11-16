@@ -1,0 +1,105 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "Interação API - Clientes (SENAI)",
+    "description": "Coleção Postman para testar todas as rotas (GET, POST, PUT, DELETE) da API de Clientes em Node.js.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Listar todos os clientes (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/clientes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["clientes"]
+        }
+      }
+    },
+    {
+      "name": "2. Buscar cliente por ID (GET ?id=1)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/clientes?id=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["clientes"],
+          "query": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. Cadastrar novo cliente (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Ana Costa\",\n  \"endereco\": \"Rua Sete de Setembro, 789\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/clientes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["clientes"]
+        }
+      }
+    },
+    {
+      "name": "4. Atualizar cliente (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Maria Silva Atualizada\",\n  \"endereco\": \"Rua das Flores, 999\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/clientes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["clientes", "1"]
+        }
+      }
+    },
+    {
+      "name": "5. Excluir cliente (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/clientes/4",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["clientes", "4"]
+        }
+      }
+    }
+  ]
+}
+
